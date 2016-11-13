@@ -1,0 +1,116 @@
+ * Running on http://localhost:6419/ (Press CTRL+C to quit)
+[2016-11-13 13:42:44,039] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/grip/app.py", line 174, in _render_page
+    content = self.renderer.render(text, self.auth)
+  File "/usr/local/lib/python2.7/dist-packages/grip/renderers.py", line 100, in render
+    r = requests.post(url, headers=headers, data=data, auth=auth)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 94, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 49, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 457, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 569, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/adapters.py", line 407, in send
+    raise ConnectionError(err, request=request)
+ConnectionError: ('Connection aborted.', gaierror(-2, 'Name or service not known'))
+127.0.0.1 - - [13/Nov/2016 13:42:44] "GET / HTTP/1.1" 500 -
+127.0.0.1 - - [13/Nov/2016 13:42:44] "GET /favicon.ico HTTP/1.1" 404 -
+Traceback (most recent call last):
+  File "/usr/local/bin/grip", line 9, in <module>
+    load_entry_point('grip==4.3.2', 'console_scripts', 'grip')()
+  File "/usr/local/lib/python2.7/dist-packages/grip/command.py", line 127, in main
+    args['--browser'], args['--quiet'], None)
+  File "/usr/local/lib/python2.7/dist-packages/grip/api.py", line 60, in serve
+    app.run(host, port, open_browser=browser)
+  File "/usr/local/lib/python2.7/dist-packages/grip/app.py", line 416, in run
+    threaded=True)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 843, in run
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 694, in run_simple
+    inner()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 656, in inner
+    fd=fd)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 544, in make_server
+    passthrough_errors, ssl_context, fd=fd)
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/serving.py", line 464, in __init__
+    HTTPServer.__init__(self, (host, int(port)), handler)
+  File "/usr/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+[2016-11-13 13:43:06,020] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/grip/app.py", line 174, in _render_page
+    content = self.renderer.render(text, self.auth)
+  File "/usr/local/lib/python2.7/dist-packages/grip/renderers.py", line 100, in render
+    r = requests.post(url, headers=headers, data=data, auth=auth)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 94, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 49, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 457, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 569, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/adapters.py", line 407, in send
+    raise ConnectionError(err, request=request)
+ConnectionError: ('Connection aborted.', gaierror(-2, 'Name or service not known'))
+127.0.0.1 - - [13/Nov/2016 13:43:06] "GET / HTTP/1.1" 500 -
+[2016-11-13 13:43:10,579] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/grip/app.py", line 174, in _render_page
+    content = self.renderer.render(text, self.auth)
+  File "/usr/local/lib/python2.7/dist-packages/grip/renderers.py", line 100, in render
+    r = requests.post(url, headers=headers, data=data, auth=auth)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 94, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/api.py", line 49, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 457, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/sessions.py", line 569, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/requests/adapters.py", line 407, in send
+    raise ConnectionError(err, request=request)
+ConnectionError: ('Connection aborted.', gaierror(-2, 'Name or service not known'))
+127.0.0.1 - - [13/Nov/2016 13:43:10] "GET / HTTP/1.1" 500 -
+[3710:3732:1113/134541:ERROR:nss_util.cc(842)] After loading Root Certs, loaded==false: NSS error code: -8018
+[3751:3751:1113/134542:ERROR:sandbox_linux.cc(334)] InitializeSandbox() called with multiple threads in process gpu-process
