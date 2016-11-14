@@ -238,19 +238,19 @@ Special handling must be taken with the "print screen" key, which is missing in 
 Notice the second lookup table which implements the special behaviour of the left "Windows" key
 ```
 char winKeyLookup[10 * 10];
-```
-		keyLookup[12] = KEY_F1;
-		winKeyLookup[12] = KEY_F11;			// F1 is F11 when lwin is down
+
+	keyLookup[12] = KEY_F1;
+	winKeyLookup[12] = KEY_F11;			// F1 is F11 when lwin is down
 
 
-						if (isLWinDown == 0)
-						{
-							Keyboard.release(keyLookup[i]);
-						}
-						else
-						{
-							Keyboard.release(winKeyLookup[i]);
-						}
+	if (isLWinDown == 0)
+	{
+		Keyboard.release(keyLookup[i]);
+	}
+	else
+	{
+		Keyboard.release(winKeyLookup[i]);
+	}
 ```
 	
 	
