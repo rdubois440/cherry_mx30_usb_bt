@@ -268,6 +268,7 @@ When the key combination Left Control + Left Alt + Left Shift is pressed --> Swi
 
 Switching between USB and Bluetooth is implemented as follows:
 
+```
 
 		if ((isKeyPressed[6] == 1) && (isKeyPressed[16] == 1) && (isKeyPressed[26] == 1))
 		{
@@ -288,18 +289,18 @@ Serial1 sends the key information to the Bluefruit Bluetooth adapter, to the pai
 ```
 
 
-					if (mode == MODE_USB)
-					{
-						...
-						Keyboard.press(keyLookup[i]);
-						...
-					}
-					if (mode == MODE_BT)
-					{	
-						...
-						Serial1.print(btLookup[i]);
-						...
-					}
+		if (mode == MODE_USB)
+		{
+			...
+			Keyboard.press(keyLookup[i]);
+			...
+		}
+		if (mode == MODE_BT)
+		{	
+			...
+			Serial1.print(btLookup[i]);
+			...
+		}
 ```
 
 
