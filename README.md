@@ -1,8 +1,5 @@
 # Hybrid USB and Bluetooth Keyboard based on a Cherry MX 3.0 
 
-##0- Todo
-Document the btkbdemu and bluetooth utilities
-
 ##1- Objectives
 
 I have multiple repositories on this github on the topic of keyboards, and keyboard hacking. Here are my objectives
@@ -314,8 +311,8 @@ A bluefruit device should pop up. I can be paired without using any pin code
 
 ##12- Limitations
 
-The very nice Adafruit Bluefruit EZ HID module has one strong limitation: it can only be paired to one target
-It is not possible to switch from one device to another one without a (simple) repairing 
+The very nice Adafruit Bluefruit EZ HID module has one strong limitation: it can only be paired to one target   
+It is not possible to switch from one device to another one without a (simple) repairing. 
 Trying to get more information from Adafruit. 
 
 
