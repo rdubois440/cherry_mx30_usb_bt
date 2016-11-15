@@ -1,5 +1,7 @@
 # Hybrid USB and Bluetooth Keyboard based on a Cherry MX 3.0 
 
+![Cherry MX 3.0 Hybrid USB Bluetooth ](images/cherrymx30_usb_bt.jpg)
+
 ##1- Objectives
 
 I have multiple repositories on this github on the topic of keyboards, and keyboard hacking. Here are my objectives
@@ -14,10 +16,10 @@ But this pointing device cannot be a mouse. After years of using a mouse, my rig
 Caps Lock is a useless key. Remap it as left mouse key
 My Europen Cherry MX has one extra key between the left shift and the "Z" key. This key is a duplicate of the "\" key, which is not strictly required. Remap it as a mouse right click
  
+![Clean Desktop](images/cherry_mx30_usb_bt_desktop.jpg)
 
 
 
-![Legend](images/Cherry_mx_30.jpg)
 
 ##3- Components
 *Cherry MX USB keyboard with brown switches
@@ -25,9 +27,12 @@ I already own a Cherry MX 3.0, and like the quality. I was about to buy a second
 Other mechanical keyboards can probably be used as well
 Avoid rubber dome / film layers keyboards, as they are very difficult to modify
 
+![Cherry MX 3.0 Keyboard](images/Cherry_mx_30.jpg)
+
 *Ergo Touchpad
-http://www.ergonomictouchpad.com/ergonomic_touchpad.php
-![Legend](images/ergonomictouchpad3.jpg)
+http://www.ergonomictouchpad.com/ergonomic_touchpad.php   
+
+![Ergo Touchpad](images/ergonomictouchpad3.jpg)
 
 *Arduino Micro Pro without headers 
 
@@ -38,7 +43,7 @@ Adafruit reports the item to be out of stock, I could find one device available 
 
 *Resistive touch screen. To be used later
 
-![Legend](images/touchscreen.jpg)
+![Resistive Touch Screen](images/touchscreen.jpg)
 
 *Thin wires, screws and this sort of things
 
@@ -52,7 +57,7 @@ It makes it possible to cut and rewire keys as desired
 * Keep the 4 arrow keys, and cut away the 9 keys above the arrow keys (page up, page down, delete, print screen etc)
 Use the space left by the 9 keys and install a USB Ergo Touchpad
 
-![Legend](images/cherrymx_cut.jpg)
+![Cutting the Cherry MX 3.0](images/cherrymx_cut.jpg)
 
 
 ##5- Wiring the modified Cherry MX 3.0
@@ -61,11 +66,11 @@ A keyboard is a matrix of rows and columns.
 The cutting operations above probably interrupted some of these connections. Just reconnect them according to you best guess
 In my case, this is how the rows and columns look like
 
-![Legend](images/20161112_152201.jpg)
+![Cherry MX 3.0 Wiring Details](images/20161112_152201.jpg)
 
 
 
-![Legend](images/20161112_1525807.jpg)
+![Arduino and Bluefruit Cards](images/20161112_155807.jpg)
 
 
 
@@ -109,11 +114,11 @@ In my case, this is how the rows and columns look like
 ```
 
 
-![Legend](images/cherrymx_wiring.jpg)
+![Cherry MX 3.0 Wiring](images/cherrymx_wiring.jpg)
 
 When done, try to put everything back into the orginal case
 
-![Legend](images/cherrymx30_case_open.jpg)
+![Cherry MX 3.0 Case](images/cherrymx_case_open.jpg)
 
 ##6- Schematic
 
@@ -125,7 +130,7 @@ Notice the diodes, internal to the switches. Without these switches, if 3 keys w
 The diodes prevent the current to flow backwards through one of the switches, and eliminate the key ghosting effect. 
 Electrically, this keyboard would be a N key roll over. The USB protocol only allows 6 keys rollover (plus the modifier keys)
 
-![Legend](images/cherry_mx30_schematic.jpg)
+![Schematic](images/cherry_mx30_schematic.jpg)
 
 
 ##7- Cherry Switches
@@ -137,7 +142,7 @@ There is a diode inside the switch, anode on pin 4, cathode on pin 3
 And you can see that pins 3 of keys on the same row are connected (Q3 and W3, A3 and S3)
 
 
-![Legend](images/cherrymx_switch.jpg)
+![Cherry Switch Detail](images/cherry_switch.jpg)
 
 ##7- Wiring the Adafruit Bluefruit EZ HID module
 
