@@ -6,15 +6,15 @@
 
 I have multiple repositories on this github on the topic of keyboards, and keyboard hacking. Here are my objectives
 
-* Use a good quality keyboard. Mechanical keyboard is preferred   
-* Should be compact. I consider the numeric keypad to be a waste of space.   
-The numeric keypad has the extra nuisance that it more or less fores you to misalign the center of your keyboard to the left of the center of the screen. This is not ergonomic 
+* Use a good quality keyboard. Mechanical keyboard is preferred.   
+* Should be compact. I consider the numeric keypad to be a waste of space.     
+The numeric keypad has the extra nuisance that it more or less forces you to misalign the center of your keyboard to the left of the center of the screen. This is not ergonomic 
 * Restrict the usage of the mouse to a strict minimum. Whenever possible, use the keyboard, or keyboard shortcuts instead of the mouse.  
-When there is no keyboard alternative, a pointing device is necessary. 
-But this pointing device cannot be a mouse. After years of using a mouse, my right hand would find the mouse if there is one, and use it when it would be better avoided. A simple and small touchpad is preferred
-* Remap the keyboard
-Caps Lock is a useless key. Remap it as left mouse key
-My Europen Cherry MX has one extra key between the left shift and the "Z" key. This key is a duplicate of the "\" key, which is not strictly required. Remap it as a mouse right click
+When there is no keyboard alternative, a pointing device is necessary.   
+But this pointing device cannot be a mouse. After years of using a mouse, my right hand would find the mouse if there is one on the desk, and use it when it would be better avoided. A simple and small touchpad is preferred.
+* Remap the keyboard.   
+Caps Lock is a useless key. Remap it as left mouse key.   
+My Europen Cherry MX has one extra key between the left shift and the "Z" key. This key is a duplicate of the "\" key, which is not strictly required. Remap it as a mouse right click.   
  
 ![Clean Desktop](images/cherry_mx30_usb_bt_desktop.jpg)
 
@@ -22,10 +22,10 @@ My Europen Cherry MX has one extra key between the left shift and the "Z" key. T
 
 
 ##3- Components
-* Cherry MX USB keyboard with brown switches
+* Cherry MX USB keyboard with brown switches.   
 I already own a Cherry MX 3.0, and like the quality. I was about to buy a second one, but was lucky to find one at a good price on an local auction web site. 
-Other mechanical keyboards can probably be used as well
-Avoid rubber dome / film layers keyboards, as they are very difficult to modify
+Other mechanical keyboards can probably be used as well.
+Avoid rubber dome / film layers keyboards, as they are very difficult to modify.
 
 ![Cherry MX 3.0 Keyboard](images/Cherry_mx_30.jpg)
 
@@ -50,11 +50,11 @@ Adafruit reports the item to be out of stock, I could find one device available 
 
 ##4- Modifications to the original Cherry MX 3.0
 
-Mechanical keyboards are good for typing, but also good for hacking. the keys are soldered on a single layer printed circuit board (PCB). 
-It makes it possible to cut and rewire keys as desired   
+Mechanical keyboards are good for typing, but also good for hacking. The keys are soldered on a single layer printed circuit board (PCB).    
+It makes it possible to cut and rewire keys as desired.   
 
 * Cut away the numeric keypad    
-* Keep the 4 arrow keys, and cut away the 9 keys above the arrow keys (page up, page down, delete, print screen etc)
+* Keep the 4 arrow keys, and cut away the 9 keys above the arrow keys (page up, page down, delete, print screen etc).
 Use the space left by the 9 keys and install a USB Ergo Touchpad
 
 ![Cutting the Cherry MX 3.0](images/cherrymx_cut.jpg)
@@ -62,9 +62,9 @@ Use the space left by the 9 keys and install a USB Ergo Touchpad
 
 ##5- Wiring the modified Cherry MX 3.0
 
-A keyboard is a matrix of rows and columns.
-The cutting operations above probably interrupted some of these connections. Just reconnect them according to you best guess
-In my case, this is how the rows and columns look like
+A keyboard is a matrix of rows and columns.     
+The cutting operations above probably interrupted some of these connections. Just reconnect them according to you best guess, or what is most convenient.   
+In my case, this is how the rows and columns look like.
 
 ![Cherry MX 3.0 Wiring Details](images/20161112_152201.jpg)
 
@@ -116,30 +116,28 @@ In my case, this is how the rows and columns look like
 
 ![Cherry MX 3.0 Wiring](images/cherrymx_wiring.jpg)
 
-When done, try to put everything back into the orginal case
+When done, try to put everything back into the orginal case.   
 
 ![Cherry MX 3.0 Case](images/cherrymx_case_open.jpg)
 
 ##6- Schematic
 
-Arduino output pins (10 in total) drive low one of the rows.    
-On this row, if no keys is pressed, switches are open and the pullup resistor internal to the arduino pull the input pins high. 
-If one or more key is pressed, the switch is closed, and the corresponding input pin is low.
+Arduino output pins (10 in total) drive low one of the rows.     
+On this row, if no keys is pressed, switches are open and the pullup resistor internal to the arduino pull the input pins high.   
+If one or more key is pressed, the switch is closed, and the corresponding input pin is low.    
 
-Notice the diodes, internal to the switches. Without these switches, if 3 keys were pressed at the corners of a square made by 2 lines and 2 columns, the arduino would think that the 4th key is also pressed
-The diodes prevent the current to flow backwards through one of the switches, and eliminate the key ghosting effect. 
-Electrically, this keyboard would be a N key roll over. The USB protocol only allows 6 keys rollover (plus the modifier keys)
+Notice the diodes, internal to the switches. Without these diodes, if 3 keys were pressed at the corners of a square made by 2 lines and 2 columns, the arduino would think that the 4th key is also pressed.   
+The diodes prevent the current to flow backwards through one of the switches, and eliminate the key ghosting effect.    
+Electrically, this keyboard would be a N key roll over. The USB protocol only allows 6 keys rollover (plus the modifier keys).
 
 ![Schematic](images/cherry_mx30_schematic.jpg)
 
 
 ##7- Cherry Switches
 
-See the fictitious labels on pins 1 2 3 and 4 of the cherry switches on the picture below, taken on keys Q W A and S
-The switch itself is between pins 1 and 2
-You can see that for each switch pins 2 and 4 are wired on the circuit
-There is a diode inside the switch, anode on pin 4, cathode on pin 3
-And you can see that pins 3 of keys on the same row are connected (Q3 and W3, A3 and S3)
+See the fictitious labels on pins 1 2 3 and 4 of the cherry switches on the picture below, taken on keys Q W A and S.   
+The switch itself is between pins 1 and 2.  You can see that for each switch pins 2 and 4 are wired on the circuit.  There is a diode inside the switch, anode on pin 4, cathode on pin 3. 
+And you can see that pins 3 of keys on the same row are connected (Q3 and W3, A3 and S3).
 
 
 ![Cherry Switch Detail](images/cherry_switch.jpg)
@@ -157,8 +155,7 @@ Tx						Rx
 
 ##8- Keyboard Mapping
 
-I only use the US QWERTY layout.
-However, I remap the following keys:
+I only use the US QWERTY layout. However, I remap the following keys:
 ```
 Caps Lock	Mouse left click
 Left "\"	Mouse right click
@@ -166,9 +163,9 @@ F11			Print screen
 F12			Delete
 ```
 
-In order to compensate the missing 9 keys above the direction keys, the left "Windows" key is used as a sort of "Fn" key as follows 
-Most of the time, the left "Windows" key is used as originally designed
-For the following keys, the left "Windows" key modifies the associated key as follows:
+In order to compensate the missing 9 keys above the direction keys, the left "Windows" key is used as a sort of "Fn" key as follows :   
+Most of the time, the left "Windows" key is used as originally designed.   
+For the following keys, the left "Windows" key modifies the associated key as follows:   
 Left Win + Arrow Up		Page Up
 Left Win + Arrow Down		Page Down
 Left Win + Arrow Left		Page Left
@@ -181,12 +178,12 @@ Left Win + F2			F12
 
 ##9- Arduino Program
 
-The program drives the rows, and reads the columns
-By default, all rows are pulled up high. they are pulled down one at a time
-For one row pulled down, each column is checked. A pressed switch will read a low value
-There can be zero or many keys pressed at the intersection of this row, and any one of the columns. 
+The program drives the rows, and reads the columns.   
+By default, all rows are pulled up high. they are pulled down one at a time.   
+For one row pulled down, each column is checked. A pressed switch will read a low value.   
+There can be zero or many keys pressed at the intersection of this row, and any one of the columns.    
 
-There are less than 100 keys, and not more than 10 keys per row or per column. It is therefore convenient to build a 10 x 10 lookup table, using decimal notation
+There are less than 100 keys, and not more than 10 keys per row or per column. It is therefore convenient to build a 10 x 10 lookup table, using decimal notation.   
 
 
 
@@ -223,7 +220,7 @@ char winKeyLookup[10 * 10];
 
 ```
 
-and initialize the lookup table with the arduino value for the corresponding key
+and initialize the lookup table with the arduino value for the corresponding key.
 
 ```
 		keyLookup[4] = KEY_F6;
@@ -231,13 +228,13 @@ and initialize the lookup table with the arduino value for the corresponding key
 		keyLookup[6] = KEY_LEFT_ALT;
 		keyLookup[7] = 'g';
 ```
-Special handling must be taken with the "print screen" key, which is missing in the arduino definition
+Special handling must be taken with the "print screen" key, which is missing in the arduino definition.
 	
 ```
 		keyLookup[36] = 0xce;			// F11 is print screen
 ```
 	
-Notice the second lookup table which implements the special behaviour of the left "Windows" key
+Notice the second lookup table which implements the special behaviour of the left "Windows" key.
 ```
 char winKeyLookup[10 * 10];
 
@@ -259,9 +256,9 @@ char winKeyLookup[10 * 10];
 	
 ##10- Mode Switch - USB or Bluetooth
 
-On power on, USB mode is active
-When the key combination Left Control + Left Alt + Right Shift is pressed --> Switch to bluetooth mode
-When the key combination Left Control + Left Alt + Left Shift is pressed --> Switch to usb mode
+On power on, USB mode is active.   
+When the key combination Left Control + Left Alt + Right Shift is pressed --> Switch to bluetooth mode.   
+When the key combination Left Control + Left Alt + Left Shift is pressed --> Switch to usb mode.   
 
 ```
 #define MODE_USB 	0
@@ -285,7 +282,7 @@ Switching between USB and Bluetooth is implemented as follows:
 		}
 ```
 
-Serial1 sends the key information to the Bluefruit Bluetooth adapter, to the paired bluetooth device
+Serial1 sends the key information to the Bluefruit Bluetooth adapter, to the paired bluetooth device.
 
 
 ```
@@ -309,19 +306,19 @@ Serial1 sends the key information to the Bluefruit Bluetooth adapter, to the pai
 
 ##11- Bluetooth Pairing 
 
-Adafruit made pairing very simple (as long as the push button is accessible, or wired to an accessible switch.
-Simply press the pairing button on the bluetooth adapter for 5 seconds. The adapter is in discoverable mode. Scan for bluetooth devices from the phone, or other device
-A bluefruit device should pop up. I can be paired without using any pin code 
+Adafruit made pairing very simple (as long as the push button is accessible, or wired to an accessible switch.   
+Simply press the pairing button on the bluetooth adapter for 5 seconds. The adapter is in discoverable mode. Scan for bluetooth devices from the phone, or other device.   
+A bluefruit device should show up. I can be paired without using any pin code.
 
 
 ##12- Limitations
 
-The very nice Adafruit Bluefruit EZ HID module has one strong limitation: it can only be paired to one target   
-It is not possible to switch from one device to another one without a (simple) repairing. 
+The very nice Adafruit Bluefruit EZ HID module has one strong limitation: it can only be paired to one target.   
+It is not possible to switch from one device to another one without a (simple) repairing.   
 Trying to get more information from Adafruit. 
 
 
 ##13- Future extension
-3.3" Touch Screen Panel Digitizer Film to Glass 70x56mm MP4 MP5 GPS Replacement
+3.3" Touch Screen Panel Digitizer Film to Glass 70x56mm MP4 MP5 GPS Replacement.   
 http://www.ebay.ch/itm/371593680880?euid=e4055c0f5092443bba7906763dcfad3e&bu=44011322663&cp=1&sojTags=bu=bu
 
