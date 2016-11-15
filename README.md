@@ -22,30 +22,30 @@ My Europen Cherry MX has one extra key between the left shift and the "Z" key. T
 
 
 ##3- Components
-*Cherry MX USB keyboard with brown switches
+* Cherry MX USB keyboard with brown switches
 I already own a Cherry MX 3.0, and like the quality. I was about to buy a second one, but was lucky to find one at a good price on an local auction web site. 
 Other mechanical keyboards can probably be used as well
 Avoid rubber dome / film layers keyboards, as they are very difficult to modify
 
 ![Cherry MX 3.0 Keyboard](images/Cherry_mx_30.jpg)
 
-*Ergo Touchpad
+* Ergo Touchpad
 http://www.ergonomictouchpad.com/ergonomic_touchpad.php   
 
 ![Ergo Touchpad](images/ergonomictouchpad3.jpg)
 
-*Arduino Micro Pro without headers 
+* Arduino Micro Pro without headers 
 
-*Bluefruit EZ-Link - Bluetooth Serial Link & Arduino Programmer - v1.3
+* Bluefruit EZ-Link - Bluetooth Serial Link & Arduino Programmer - v1.3
 https://www.adafruit.com/products/1588
 Adafruit reports the item to be out of stock, I could find one device available at a local store
 
 
-*Resistive touch screen. To be used later
+* Resistive touch screen. To be used later
 
 ![Resistive Touch Screen](images/touchscreen.jpg)
 
-*Thin wires, screws and this sort of things
+* Thin wires, screws and this sort of things
 
 
 ##4- Modifications to the original Cherry MX 3.0
